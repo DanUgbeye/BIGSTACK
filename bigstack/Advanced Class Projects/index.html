@@ -1,0 +1,114 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>COUNTDOWN AND TOGGLE SWITCH</title>
+    <link rel="stylesheet" href="./css/style.css">
+
+    <script src="./js/mode.js"></script>
+</head>
+<body>
+   
+    <div class= "container">
+        <div class="NavBar" >
+            <ul>
+                <li id="home"><a href="">HOME</a></li>
+                <li id="about"><a href="">ABOUT</a></li>
+                <li id="contact us"> <a href="">CONTACT US</a></li>
+                <li><a id= "toggle-link"><img src = "img/moon.png" id = "toggle"></a></li>         
+            </ul> 
+            
+        </div>
+    </div>
+
+
+
+    <div id= "mid">
+
+        <div id = "project-container">
+
+            <div class = "pro coming-soon">COMING SOON</div>
+            <div class = "pro to-do">TO-DO LIST</div>
+            <div class = "pro weight">WEIGHT CONVERTER</div>
+            <div class = "pro pword-gen">PASSWORD GENERATOR</div>
+
+        </div>
+
+        <div id = "coming-soon">
+            This Webpage is coming Soon <br> ...
+        </div>
+
+        <div id = "to-do">
+            NOT YET
+        </div>
+
+        <div id = "weight">
+
+            <h2>WEIGHT CONVERTER</h2>
+
+            <div class = "ip">
+
+                <label for="input-unit"> FROM : </label>
+                <br>
+                <input type="text" id = "input">
+
+                <select name="input-unit" id= "input-unit">
+                    <option value="kg">KG</option>
+                    <option value="pound">Pounds</option>
+                </select>
+
+            </div>
+            
+            <div class = "op">
+
+                <label for="output-unit"> TO : </label>
+                <br>
+                <input type="text" id = "output">
+
+                <select name="output-unit" id= "output-unit">
+                    <option value="pound">Pounds</option>
+                    <option value="kg">KG</option>
+                </select>
+
+            </div>
+
+        </div>
+            
+        <div id = "pword-gen">
+            Lorem ipsum dolor, sit amet consectetur
+        </div>
+
+    </div>
+
+
+   
+
+    
+
+    <footer class= "footer">
+
+        <div class= "launch">
+
+            <h4>TIME LEFT TILL LAUNCH</h4>
+    
+            <div class="countdown">
+                <p id="days"></p>
+                <p id="hours"></p>
+                <p id="mins"></p>
+                <p id="secs"></p>
+            </div>
+
+            <h2 id="elapsed"></h2>
+
+        </div> 
+    </footer>
+    
+
+    <script src="./js/countdown.js"></script>
+    <script src="./js/toggle.js"></script>
+    <script src="./js/switch.js"></script>
+    <script src="./js/weightConverter.js"></script>
+
+</body>
+
+</html>
