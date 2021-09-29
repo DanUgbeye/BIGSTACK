@@ -8,9 +8,14 @@ var outSelec = document.querySelector("#output-unit")
 
 function weightConvert(){
     // console.log(e.target)
-        var inputSel = document.querySelector("#input-unit").value;
-        var outputSel = document.querySelector("#output-unit").value;
-        var inputNo = document.querySelector("#input").value;
+    var inputSel = document.querySelector("#input-unit").value;
+    var outputSel = document.querySelector("#output-unit").value;
+    var inputNo = document.querySelector("#input").value;
+
+    if(!inputNo){
+        document.querySelector("#output").value = null;
+
+    }else{ 
     
         if(inputSel == outputSel){
             document.querySelector("#output").value = inputNo;
@@ -23,8 +28,9 @@ function weightConvert(){
         if(inputSel == "pound" && outputSel == "kg"){
             document.querySelector("#output").value = (inputNo * 0.45359237);
         }
-    
     }
+    
+}
 
 inputNum.addEventListener('input', weightConvert )
 inSelec.addEventListener('click', weightConvert);

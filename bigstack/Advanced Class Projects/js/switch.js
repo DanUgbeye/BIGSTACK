@@ -11,7 +11,8 @@ comingSoon.onclick = function(){
     document.querySelector("#weight").style.display= "none"
     document.querySelector("#pword-gen").style.display= "none"
     document.querySelector(".footer").style.display= "flex"
-    
+    document.querySelector(".launch").style.display= "flex"
+
 }
 
 toDo.onclick = function(){
@@ -21,6 +22,7 @@ toDo.onclick = function(){
     document.querySelector("#weight").style.display= "none"
     document.querySelector("#pword-gen").style.display= "none"
     document.querySelector(".footer").style.display= "none"
+
 }
 
 weight.onclick = function(){
@@ -29,7 +31,9 @@ weight.onclick = function(){
     document.querySelector("#to-do").style.display= "none"
     document.querySelector("#weight").style.display= "flex"
     document.querySelector("#pword-gen").style.display= "none"
-    document.querySelector(".footer").style.display= "none"
+    document.querySelector(".footer").style.display= "flex"
+    document.querySelector(".launch").style.display= "none"
+
 }
 
 pwordGen.onclick = function(){
@@ -39,4 +43,5 @@ pwordGen.onclick = function(){
     document.querySelector("#weight").style.display= "none"
     document.querySelector("#pword-gen").style.display= "flex"
     document.querySelector(".footer").style.display= "none"
+
 }

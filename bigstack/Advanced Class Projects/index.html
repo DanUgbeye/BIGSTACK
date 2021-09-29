@@ -1,16 +1,18 @@
 <!DOCTYPE HTML>
 <html>
 <head>
+
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>COUNTDOWN AND TOGGLE SWITCH</title>
     <link rel="stylesheet" href="./css/style.css">
 
-    <script src="./js/mode.js"></script>
 </head>
 <body>
-   
-    <div class= "container">
-        <div class="NavBar" >
+
+    
+
+    <div class = "container">
+        <div class ="NavBar" >
             <ul>
                 <li id="home"><a href="">HOME</a></li>
                 <li id="about"><a href="">ABOUT</a></li>
@@ -39,7 +41,11 @@
         </div>
 
         <div id = "to-do">
-            NOT YET
+
+            <div></div>
+            <div></div>
+            <div></div>
+
         </div>
 
         <div id = "weight">
@@ -48,27 +54,33 @@
 
             <div class = "ip">
 
-                <label for="input-unit"> FROM : </label>
+                <label for="input-unit" class= "label"> FROM : </label>
                 <br>
-                <input type="text" id = "input">
+                <span class = "ip-field">
+                    <input type="text" id = "input">
 
-                <select name="input-unit" id= "input-unit">
-                    <option value="kg">KG</option>
-                    <option value="pound">Pounds</option>
-                </select>
+                    <select name="input-unit" id= "input-unit">
+                        <option value="kg">kg</option>
+                        <option value="pound">lb</option>
+                    </select>
+                </span>
+               
 
             </div>
             
             <div class = "op">
 
-                <label for="output-unit"> TO : </label>
+                <label for="output-unit" class= "label"> TO : </label>
                 <br>
-                <input type="text" id = "output">
+                <span class = "ip-field"class = "ip-field">
+                    <input type="text" id = "output">
 
-                <select name="output-unit" id= "output-unit">
-                    <option value="pound">Pounds</option>
-                    <option value="kg">KG</option>
-                </select>
+                    <select name="output-unit" id= "output-unit">
+                        <option value="pound">lb</option>
+                        <option value="kg">kg</option>
+                    </select>
+                </span>
+                
 
             </div>
 
@@ -80,10 +92,6 @@
 
     </div>
 
-
-   
-
-    
 
     <footer class= "footer">
 
@@ -103,7 +111,7 @@
         </div> 
     </footer>
     
-
+    <script src="./js/mode.js"></script>
     <script src="./js/countdown.js"></script>
     <script src="./js/toggle.js"></script>
     <script src="./js/switch.js"></script>
