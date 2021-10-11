@@ -42,9 +42,31 @@
 
         <div id = "to-do">
 
-            <div></div>
-            <div></div>
-            <div></div>
+            <div class="todo">
+
+                <h2>Create a task</h2>
+
+                <div id= "type">
+
+                    <input type="text" placeholder="Input your task here ">
+                    
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v3m0 0v3m0-3h3m-3 0H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                    
+                </div>
+
+            </div>
+            
+            <div class = "todoList">
+
+                <h2>TO DO LIST</h2>
+
+                <div class = "list">
+                    <ul></ul>
+                </div>
+               
+            </div>
 
         </div>
 
@@ -87,7 +109,43 @@
         </div>
             
         <div id = "pword-gen">
-            Lorem ipsum dolor, sit amet consectetur
+
+            <h2>Password Generator</h2>
+
+            <div class = "p-word-item input">
+
+                <input type="text" id = "print" readonly>
+
+                <div class="copy">
+
+                    <span id = "popup-text">copy to clipboard</span>
+
+                    <div class="copy-div white">
+                        <svg class = "copy-icon" id ="white" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" />
+                        </svg>
+                    </div>
+                    
+                    <div class="copy-div black">
+                        <svg class = "copy-icon" id ="black" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                            <path d="M9 2a1 1 0 000 2h2a1 1 0 100-2H9z" />
+                            <path fill-rule="evenodd" d="M4 5a2 2 0 012-2 3 3 0 003 3h2a3 3 0 003-3 2 2 0 012 2v11a2 2 0 01-2 2H6a2 2 0 01-2-2V5zm9.707 5.707a1 1 0 00-1.414-1.414L9 12.586l-1.293-1.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                        </svg>
+                    </div>
+                    
+                </div>
+               
+            </div>
+
+            <div class= "p-word-item sel">
+                <label>Input number of Characters</label>
+                <input type="number" min="1" max="24">
+            </div>
+
+            <button id="generate">
+                Generate Password
+            </button>
+            
         </div>
 
     </div>
@@ -101,12 +159,15 @@
     
             <div class="countdown">
                 <p id="days"></p>
+                <p>:</p>
                 <p id="hours"></p>
+                <p>:</p>
                 <p id="mins"></p>
+                <p>:</p>
                 <p id="secs"></p>
             </div>
 
-            <h2 id="elapsed"></h2>
+            <!-- <h2 id="elapsed"></h2> -->
 
         </div> 
     </footer>
@@ -116,6 +177,9 @@
     <script src="./js/toggle.js"></script>
     <script src="./js/switch.js"></script>
     <script src="./js/weightConverter.js"></script>
+    <script src="./js/toDoList.js"></script>
+    <script src="./js/pgen.js"></script>
+    <!-- <script src="fontawesome.js" crossorigin="anonymous"></script> -->
 
 </body>
 

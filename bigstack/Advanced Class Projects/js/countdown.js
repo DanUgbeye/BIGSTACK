@@ -1,5 +1,5 @@
 // The data/time we want to countdown to
-var countDownDate = new Date("Sep 31, 2021 12:00:00").getTime();
+var countDownDate = new Date("Oct 10, 2021 12:00:00").getTime();
 
 // Run myfunc every second
 var myfunc = setInterval(function () {
@@ -24,25 +24,25 @@ var myfunc = setInterval(function () {
 
     // Outputing the Time left
 
-    if(days < 10 && days > 0){
+    if((days < 10 && days > 0) || days == 0){
         document.getElementById("days").innerHTML = "0"+ days + " <br> days"
     } else{
         document.getElementById("days").innerHTML = days + " <br> days"
     }
 
-    if(hours < 10 && days > 0){
+    if((hours < 10 && hours > 0) || hours == 0 ){
         document.getElementById("hours").innerHTML = "0"+ hours + "<br> hrs "
     } else{
         document.getElementById("hours").innerHTML = hours + " <br> hrs "
     }
     
-    if(minutes < 10 && days > 0){
+    if((minutes < 10 && minutes > 0) || minutes == 0 ){
         document.getElementById("mins").innerHTML = "0"+ minutes + " <br> mins "
     } else{
         document.getElementById("mins").innerHTML = minutes + " <br> mins "
     }
     
-    if(seconds < 10 && days > 0){
+    if((seconds < 10 && seconds > 0) || seconds == 0 ){
         document.getElementById("secs").innerHTML = "0"+ seconds + " <br> secs "
     } else{
         document.getElementById("secs").innerHTML = seconds + " <br> secs "
