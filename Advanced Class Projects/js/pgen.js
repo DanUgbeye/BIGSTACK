@@ -1,13 +1,14 @@
-let  pField = "abcdefghijklmnopqrstuvwxyz0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ!@#$&=";
+let pField = "abcdefghijklmnopqrstuvwxyz0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ!@#$&=";
 
 
 let button = document.querySelector('#pword-gen button');
 
-document.querySelector('.copy-icon').onMouseOut = function(){
+document.querySelector('.copy-icon').onMouseOut = function () {
     document.querySelector("#popup-text").innerHTML = "copy to clipboard";
     document.querySelector("#popup-text").style.display = "block";
     document.querySelector("#popup-text").style.opacity = "1";
 }
+
 
 
 button.onclick = () => {
@@ -23,14 +24,14 @@ button.onclick = () => {
 
     let pword = "";
 
-    if(noChar == null){
+    if (noChar == null) {
         alert("Input number of Characters to generate");
-    }else if(noChar < 8 ){
+    } else if (noChar < 8) {
         alert('Password length is too short\n Input number greater than or equal to 8');
-    }else if(noChar > 1000){
+    } else if (noChar > 1000) {
         alert('Input number less than or equal to 999');
-    }else{
-        while(noChar > 0){
+    } else {
+        while (noChar > 0) {
             let rand = Math.floor(Math.random() * pField.length);
             pword += pField[rand];
             --noChar;
@@ -43,9 +44,9 @@ button.onclick = () => {
             copyIconWhite.style.display = "none";
             copyIconBlack.style.display = "block";
 
-            if(output.value == ""){
+            if (output.value == "") {
                 alert('Nothing to copy')
-            }            
+            }
 
             output.select();
             output.setSelectionRange(0, 999);
@@ -57,9 +58,7 @@ button.onclick = () => {
         }
     }
 
-    
 }
-
 
 
 
