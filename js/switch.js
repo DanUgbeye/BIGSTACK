@@ -6,51 +6,80 @@ var pwordGen = document.querySelector(".pword-gen");
 
 comingSoon.onclick = function () {
 
-    document.querySelector("#coming-soon").style.backgroundColor = "#555";
+    document.querySelector(".coming-soon").classList.add("active");
+    document.querySelector(".to-do").classList.remove("active");
+    document.querySelector(".weight").classList.remove("active");
+    document.querySelector(".pword-gen").classList.remove("active");
+    document.querySelector(".analog-clock").classList.remove("active");
 
-
-    if ( getComputedStyle(document.querySelector("#coming-soon")).backgroundColor === "grey") {
-        // alert("true");
-    }else{
-        // alert("false");
-    }
     document.querySelector("#coming-soon").style.display = "flex";
     document.querySelector("#to-do").style.display = "none";
     document.querySelector("#weight").style.display = "none";
     document.querySelector("#pword-gen").style.display = "none";
-    document.querySelector(".footer").style.display = "flex";
-    document.querySelector(".launch").style.display = "flex";
+    document.querySelector("#analog-clock").style.display = "none";
 
 }
 
 toDo.onclick = function () {
 
-    document.querySelector("#coming-soon").style.display = "none"
-    document.querySelector("#to-do").style.display = "flex"
-    document.querySelector("#weight").style.display = "none"
-    document.querySelector("#pword-gen").style.display = "none"
-    document.querySelector(".footer").style.display = "none"
+    document.querySelector(".coming-soon").classList.remove("active");
+    document.querySelector(".to-do").classList.add("active");
+    document.querySelector(".weight").classList.remove("active");
+    document.querySelector(".pword-gen").classList.remove("active");
+    document.querySelector(".analog-clock").classList.remove("active");
+
+    document.querySelector("#coming-soon").style.display = "none";
+    document.querySelector("#to-do").style.display = "flex";
+    document.querySelector("#weight").style.display = "none";
+    document.querySelector("#pword-gen").style.display = "none";
+    document.querySelector("#analog-clock").style.display = "none";
 
 }
 
 weight.onclick = function () {
 
-    document.querySelector("#coming-soon").style.display = "none"
-    document.querySelector("#to-do").style.display = "none"
-    document.querySelector("#weight").style.display = "flex"
-    document.querySelector("#pword-gen").style.display = "none"
-    document.querySelector(".footer").style.display = "flex"
-    document.querySelector(".launch").style.display = "none"
+    document.querySelector(".coming-soon").classList.remove("active");
+    document.querySelector(".to-do").classList.remove("active");
+    document.querySelector(".weight").classList.add("active");
+    document.querySelector(".pword-gen").classList.remove("active");
+    document.querySelector(".analog-clock").classList.remove("active");
+
+    document.querySelector("#coming-soon").style.display = "none";
+    document.querySelector("#to-do").style.display = "none";
+    document.querySelector("#weight").style.display = "flex";
+    document.querySelector("#pword-gen").style.display = "none";
+    document.querySelector("#analog-clock").style.display = "none";
 
 }
 
 pwordGen.onclick = function () {
 
-    document.querySelector("#coming-soon").style.display = "none"
-    document.querySelector("#to-do").style.display = "none"
-    document.querySelector("#weight").style.display = "none"
-    document.querySelector("#pword-gen").style.display = "flex"
-    document.querySelector(".footer").style.display = "none"
+    document.querySelector(".coming-soon").classList.remove("active");
+    document.querySelector(".to-do").classList.remove("active");
+    document.querySelector(".weight").classList.remove("active");
+    document.querySelector(".pword-gen").classList.add("active");
+    document.querySelector(".analog-clock").classList.remove("active");
+
+    document.querySelector("#coming-soon").style.display = "none";
+    document.querySelector("#to-do").style.display = "none";
+    document.querySelector("#weight").style.display = "none";
+    document.querySelector("#pword-gen").style.display = "flex";
+    document.querySelector("#analog-clock").style.display = "none";
 
 }
-console.log( getComputedStyle(document.querySelector("#coming-soon")).backgroundColor);
+console.log( getComputedStyle(document.querySelector(".coming-soon")).backgroundColor);
+
+function analogClock(){
+
+    document.querySelector(".coming-soon").classList.remove("active");
+    document.querySelector(".to-do").classList.remove("active");
+    document.querySelector(".weight").classList.remove("active");
+    document.querySelector(".pword-gen").classList.remove("active");
+    document.querySelector(".analog-clock").classList.add("active");
+
+    document.querySelector("#coming-soon").style.display = "none";
+    document.querySelector("#to-do").style.display = "none";
+    document.querySelector("#weight").style.display = "none";
+    document.querySelector("#pword-gen").style.display = "none";
+    document.querySelector("#analog-clock").style.display = "flex";
+}

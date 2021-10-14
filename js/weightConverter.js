@@ -22,15 +22,16 @@ function weightConvert(){
         }
     
         if(inputSel == "kg" && outputSel == "pound"){
-            document.querySelector("#output").value = (inputNo * 2.2046226218);
+            Math.fround(document.querySelector("#output").value = (inputNo * 2.2046));
         }
     
         if(inputSel == "pound" && outputSel == "kg"){
-            document.querySelector("#output").value = (inputNo * 0.45359237);
+            Math.fround(document.querySelector("#output").value = (inputNo * 0.4536));
         }
     }
     
 }
+
 
 inputNum.addEventListener('input', weightConvert )
 inSelec.addEventListener('click', weightConvert);
