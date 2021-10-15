@@ -3,12 +3,21 @@ let pField = "abcdefghijklmnopqrstuvwxyz0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ!@#$
 
 let button = document.querySelector('#pword-gen button');
 
-document.querySelector('.copy-icon').onMouseOut = function () {
-    document.querySelector("#popup-text").innerHTML = "copy to clipboard";
-    document.querySelector("#popup-text").style.display = "block";
-    document.querySelector("#popup-text").style.opacity = "1";
+function hover() {
+    if(document.querySelector('#print').value == ""){
+        document.querySelector("#popup-text").style.display = "none";
+    }else{
+        document.querySelector("#popup-text").style.display = "block";
+
+        setTimeout(()=>{
+            document.querySelector("#popup-text").style.display = "none";
+        }, 1500)
+    }
 }
 
+function onLeave(){
+    document.querySelector("#popup-text").style.display = "none";
+}
 
 
 button.onclick = () => {
@@ -18,7 +27,9 @@ button.onclick = () => {
     let copyIcons = document.querySelector('.copy')
     let copyIconWhite = document.querySelector('#white');
     let copyIconBlack = document.querySelector('#black');
+    let popup = document.querySelector("#popup-text");
 
+    popup.innerHTML = "Copy to Clipboard"
     copyIconWhite.style.display = "block";
     copyIconBlack.style.display = "none";
 
@@ -48,12 +59,17 @@ button.onclick = () => {
                 alert('Nothing to copy')
             }
 
+
+
             output.select();
             output.setSelectionRange(0, 999);
             navigator.clipboard.writeText(output.value);
 
-            var popup = document.querySelector("#popup-text");
             popup.innerHTML = "Copied";
+
+            let timer = setTimeout(()=>{
+                popup.style.display = "none";
+            }, 2000)
             // alert('copied');
         }
     }

@@ -35,4 +35,4 @@ function setRotation(element, rotationRatio){
 }
 
 setClock();
-animation();
+animation;
