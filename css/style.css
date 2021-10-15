@@ -693,6 +693,11 @@ h4 {
   -moz-transition-duration: 300ms;
 }
 
+#clock-img{
+  width: 300px;
+  height: 300px;
+}
+
 .hand{
   --rotation: 0deg;
   bottom: 50%;
