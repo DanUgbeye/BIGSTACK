@@ -1,20 +1,20 @@
 let box = 0;
 setInterval(setClock, 1000);
 
+let animation = setInterval(() => {
+    if(box == 0){
+        document.querySelector('.container-analog').style.setProperty('box-shadow', '0 0 20px black');
+        box = 1;
+    }else if(box == 1){
+       document.querySelector('.container-analog').style.setProperty('box-shadow', '0 0 30px black');
+       box = 0;
+    }
+}, 500)
+
 
 
 
 function setClock(){
-
-    if(box == 0){
-        document.querySelector('.container').style.setProperty('box-shadow', '0 0 20px black');
-        box = 1;
-    }else if(box == 1){
-       document.querySelector('.container').style.setProperty('box-shadow', '0 0 50px black');
-       box = 0;
-    }
-    
-
 
     let secHand = document.querySelector('.sec');
     let minHand = document.querySelector('.min');
@@ -35,3 +35,4 @@ function setRotation(element, rotationRatio){
 }
 
 setClock();
+animation();
