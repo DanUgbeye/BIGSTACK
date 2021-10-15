@@ -67,7 +67,6 @@ pwordGen.onclick = function () {
     document.querySelector("#analog-clock").style.display = "none";
 
 }
-console.log( getComputedStyle(document.querySelector(".coming-soon")).backgroundColor);
 
 function analogClock(){
 

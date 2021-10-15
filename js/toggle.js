@@ -1,8 +1,9 @@
 var toggle = document.getElementById("toggle");
-var tog = document.getElementById("toggle-link")
+var tog = document.getElementById("toggle-link");
+// let clockImg = document.querySelector('#clock-img');
 
 function switched(toggled){
-    
+
     document.body.classList.toggle("dark-theme");
 
     if (document.body.classList.contains("dark-theme")){
@@ -22,7 +23,9 @@ toggle.onclick, tog.onclick = function(){
 
     if(document.body.classList.contains("dark-theme")){
         toggle.src = "img/sun.png";
+        clockImg.src = "img/Clock-No-Hands-PNG-Clipart-white.png";
     }else{
         toggle.src = "img/moon.png";
+        clockImg.src = "img/Clock-No-Hands-PNG-Clipart.png";
     }
 }
