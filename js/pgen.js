@@ -11,7 +11,7 @@ function hover() {
 
         setTimeout(()=>{
             document.querySelector("#popup-text").style.display = "none";
-        }, 1500)
+        }, 2000)
     }
 }
 
@@ -66,6 +66,7 @@ button.onclick = () => {
             navigator.clipboard.writeText(output.value);
 
             popup.innerHTML = "Copied";
+            popup.style.top = "-100%";
 
             let timer = setTimeout(()=>{
                 popup.style.display = "none";
