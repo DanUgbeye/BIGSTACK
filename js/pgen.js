@@ -1,4 +1,4 @@
-let pField = "abcdefghijklmnopqrstuvwxyz0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ!@#$&=";
+let pField = "abcdefghijklmnopqrstuvwxyz0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ!@#$&=%?.,+_/";
 
 
 let button = document.querySelector('#pword-gen button');
@@ -29,7 +29,8 @@ button.onclick = () => {
     let copyIconBlack = document.querySelector('#black');
     let popup = document.querySelector("#popup-text");
 
-    popup.innerHTML = "Copy to Clipboard"
+    popup.innerHTML = "Copy to Clipboard";
+    popup.style.top = "-145%";
     copyIconWhite.style.display = "block";
     copyIconBlack.style.display = "none";
 
@@ -52,14 +53,19 @@ button.onclick = () => {
 
         copyIcons.onclick = () => {
 
+            let timer;
+
+            if(timer != undefined ){
+                clearTimeout(timer);
+            }
+
             copyIconWhite.style.display = "none";
             copyIconBlack.style.display = "block";
+            popup.style.display = "block";
 
             if (output.value == "") {
                 alert('Nothing to copy')
             }
-
-
 
             output.select();
             output.setSelectionRange(0, 999);
@@ -68,10 +74,9 @@ button.onclick = () => {
             popup.innerHTML = "Copied";
             popup.style.top = "-100%";
 
-            let timer = setTimeout(()=>{
+            timer = setTimeout(()=>{
                 popup.style.display = "none";
             }, 2000)
-            // alert('copied');
         }
     }
 

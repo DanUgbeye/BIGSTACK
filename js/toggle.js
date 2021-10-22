@@ -1,6 +1,6 @@
-var toggle = document.getElementById("toggle");
-var tog = document.getElementById("toggle-link");
-// let clockImg = document.querySelector('#clock-img');
+let toggle = document.getElementById("toggle");
+let tog = document.getElementById("toggle-link");
+let clockImg = document.querySelector('#clock-img');
 
 function switched(toggled){
 
@@ -17,7 +17,7 @@ function switched(toggled){
 
 toggle.onclick, tog.onclick = function(){
 
-    var toggled;
+    let toggled;
 
     switched(toggled);
 

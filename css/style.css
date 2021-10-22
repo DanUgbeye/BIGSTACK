@@ -51,76 +51,66 @@ body {
   position: relative;
   top: 0;
   display: flex;
-  margin-bottom: 0;
+  margin-bottom: 2px;
   margin-right: 0;
   margin-left: 0;
   background-color: transparent;
   justify-content: right;
   width: 100%;
-  height: fit-content;
+  max-height: 40px;
 }
 
 .NavBar ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
   display: inline-flex;
 }
 
-.NavBar li {
-  margin: 0;
-  padding: 0;
+.NavBar .nav-item {
+  display: inline-block;
+  outline: 0;
   font-family: "Helvetica";
   list-style-type: none;
   display: inline-block;
-  font-size: 16px;
-  height: fit-content;
-
-}
-
-.NavBar li a {
-  display: inline-block;
-  text-decoration: none;
-  outline: 0;
+  font-size: 14px;
+  cursor: pointer;
+  height: inherit;
   font-weight: normal;
-  padding: 15px 20px;
-  /* font-size: 15px; */
-  color: var(--primary-color);
+  padding: 10px 15px;
+  margin: 0 1px;
   transition-duration: 250ms;
   -webkit-transition-duration: 250ms;
   -o-transition-duration: 250ms;
   -moz-transition-duration: 250ms;
 }
 
-.NavBar li a:hover {
-  background-color: var(--hover-color);
-  color: white;
-  border-radius: 0;
-
+.NavBar li a{
+  text-decoration: none;
+  color: var(--primary-color);
+}
+.NavBar .nav-item:hover{
+  background-color: rgba(100, 100, 100, 0.3);
+  border-bottom: 1px solid var(--secondary-color);
 }
 
-#toggle-link {
-  padding: 9px 19px;
+.NavBar .nav-item:hover a{
+  color: white;
 }
 
 #toggle {
-  padding: 0px;
-  width: 30px;
-  height: 30px;
+  padding: 1px inherit;
+  width: 20px;
+  height: 20px;
   margin: 0;
   cursor: pointer;
   align-self: center;
-  justify-self: right;
   transition-duration: 250ms;
   -webkit-transition-duration: 250ms;
   -o-transition-duration: 250ms;
   -moz-transition-duration: 250ms;
 }
 
-#toggle:hover {
-  border-radius: 5px;
+/* #toggle:hover {
   background-color: var(--hover-color);
-}
+} */
 
 /* NAV BAR ENDS HERE */
 /* ------------------------------------------------------------------------------------------------------- */
@@ -170,7 +160,7 @@ body {
 }
 
 .mid-item{
-  transition-duration: 0.5s;
+  transition-duration: 0.1s;
 }
 
 /* MID SELECTORS END */
@@ -658,7 +648,7 @@ h4 {
   background: var(--bg-color);
 }
 
-#pword-gen button:hover, #pword-gen button:active, #pword-gen button:focus {
+#pword-gen button:hover {
   background: linear-gradient(0deg, var(--bg-color), grey, var(--bg-color));
   border: 1px solid white;
   box-shadow: 0 0 9px rgba(0, 0, 0, 0.9);
@@ -720,23 +710,23 @@ h4 {
   transform: rotate(calc(var(--rotation) * 1deg));
 }
 .sec{
-  background-color: rgba(200, 0, 0, 0.6);
+  background-color: rgba(255, 0, 0, 0.877);
   width: 2px;
-  height: 120px;
-  display: block;    
+  height: 125px;
+  display: block;
 }
 
 .min{
   background-color: rgba(0, 0, 0, 0.8);
   width: 3px;
-  height: 80px;
+  height: 100px;
   display: block;
 }
 
 .hour{
   background-color: rgba(0, 0, 0, 0.9);
   width: 5px;
-  height: 60px;
+  height: 75px;
   display: block;
 }
 

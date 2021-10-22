@@ -1,7 +1,7 @@
-var comingSoon = document.querySelector(".coming-soon");
-var toDo = document.querySelector(".to-do");
-var weight = document.querySelector(".weight");
-var pwordGen = document.querySelector(".pword-gen");
+let comingSoon = document.querySelector(".coming-soon");
+let toDo = document.querySelector(".to-do");
+let weight = document.querySelector(".weight");
+let pwordGen = document.querySelector(".pword-gen");
 
 
 comingSoon.onclick = function () {

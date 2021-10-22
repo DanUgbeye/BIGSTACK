@@ -1,16 +1,16 @@
 
-var inputNum = document.querySelector("#input");
+let inputNum = document.querySelector("#input");
 
-var convertButton = document.querySelector("#convert");
+let convertButton = document.querySelector("#convert");
 
-var inSelec = document.querySelector("#input-unit");
-var outSelec = document.querySelector("#output-unit")
+let inSelec = document.querySelector("#input-unit");
+let outSelec = document.querySelector("#output-unit")
 
 function weightConvert(){
     // console.log(e.target)
-    var inputSel = document.querySelector("#input-unit").value;
-    var outputSel = document.querySelector("#output-unit").value;
-    var inputNo = document.querySelector("#input").value;
+    let inputSel = document.querySelector("#input-unit").value;
+    let outputSel = document.querySelector("#output-unit").value;
+    let inputNo = document.querySelector("#input").value;
 
     if(!inputNo){
         document.querySelector("#output").value = null;

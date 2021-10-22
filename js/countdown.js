@@ -1,26 +1,26 @@
 // The data/time we want to countdown to
-var countDownDate = new Date("Oct 29, 2021 12:00:00").getTime();
+const countDownDate = new Date("Oct 29, 2021 12:00:00").getTime();
 
 // Run myfunc every second
-var myfunc = setInterval(function () {
+let myfunc = setInterval(function () {
 
-    var now = new Date().getTime();
+    let now = new Date().getTime();
 
-    var timeleft = countDownDate - now;
+    let timeleft = countDownDate - now;
 
     // Calculating the days, hours, minutes and seconds left
 
-    var trueDays = timeleft / (1000 * 60 * 60 * 24);
-    var days = Math.floor(trueDays);
+    let trueDays = timeleft / (1000 * 60 * 60 * 24);
+    let days = Math.floor(trueDays);
 
-    var trueHours = (trueDays - Math.floor(trueDays)) * 24;
-    var hours = Math.floor(trueHours);
+    let trueHours = (trueDays - Math.floor(trueDays)) * 24;
+    let hours = Math.floor(trueHours);
 
-    var trueMinutes = (trueHours - Math.floor(trueHours)) * 60;
-    var minutes = Math.floor(trueMinutes);
+    let trueMinutes = (trueHours - Math.floor(trueHours)) * 60;
+    let minutes = Math.floor(trueMinutes);
 
-    var trueSeconds = (trueMinutes - Math.floor(trueMinutes)) * 60;
-    var seconds = Math.floor(trueSeconds);
+    let trueSeconds = (trueMinutes - Math.floor(trueMinutes)) * 60;
+    let seconds = Math.floor(trueSeconds);
 
     // Outputing the Time left
 
@@ -35,24 +35,24 @@ var myfunc = setInterval(function () {
     } else{
         document.getElementById("hours").innerHTML = hours + " <br> hrs "
     }
-    
+
     if((minutes < 10 && minutes > 0) || minutes == 0 ){
         document.getElementById("mins").innerHTML = "0"+ minutes + " <br> mins "
     } else{
         document.getElementById("mins").innerHTML = minutes + " <br> mins "
     }
-    
+
     if((seconds < 10 && seconds > 0) || seconds == 0 ){
         document.getElementById("secs").innerHTML = "0"+ seconds + " <br> secs "
     } else{
         document.getElementById("secs").innerHTML = seconds + " <br> secs "
     }
-    
-    
+
+
     // Display the message when countdown is over
     if (timeleft < 0) {
         clearInterval(myfunc);
-        
+
         document.querySelector(".launch").style.visibility = "hidden"
 
         // document.getElementById("days").innerHTML = "--"

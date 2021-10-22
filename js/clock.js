@@ -6,7 +6,7 @@ let animation = setInterval(() => {
         document.querySelector('.container-analog').style.setProperty('box-shadow', '0 0 20px black');
         box = 1;
     }else if(box == 1){
-       document.querySelector('.container-analog').style.setProperty('box-shadow', '0 0 30px black');
+       document.querySelector('.container-analog').style.setProperty('box-shadow', '0 0 40px black');
        box = 0;
     }
 }, 500)
