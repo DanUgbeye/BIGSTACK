@@ -15,18 +15,18 @@ function weightConvert(){
     if(!inputNo){
         document.querySelector("#output").value = null;
 
-    }else{ 
+    }else{
     
         if(inputSel == outputSel){
             document.querySelector("#output").value = inputNo;
         }
     
         if(inputSel == "kg" && outputSel == "pound"){
-            Math.fround(document.querySelector("#output").value = (inputNo * 2.2046));
+            document.querySelector("#output").value = ((inputNo * 2.2046 / 10) * 10).toFixed(4);
         }
     
         if(inputSel == "pound" && outputSel == "kg"){
-            Math.fround(document.querySelector("#output").value = (inputNo * 0.4536));
+            document.querySelector("#output").value = ((inputNo * 0.4536 / 10) * 10).toFixed(4);
         }
     }
     
