@@ -15,7 +15,7 @@ function weightConvert(){
     if(!inputNo){
         document.querySelector("#output").value = null;
 
-    }else{
+    }else{ 
     
         if(inputSel == outputSel){
             document.querySelector("#output").value = inputNo;
